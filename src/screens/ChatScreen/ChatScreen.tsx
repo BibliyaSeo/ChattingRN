@@ -6,13 +6,13 @@ import {
   Platform,
 } from 'react-native';
 import React from 'react';
-import Message from '../components/Message';
-import messages from '../assets/data/messages.json';
-import {IMessage} from '../types/chatTypes';
-import InputBox from '../components/InputBox';
+import Message from '../../components/Message';
+import messages from '../../assets/data/messages.json';
+import {IMessage} from '../../types/chatTypes';
+import InputBox from '../../components/InputBox';
 import {StatusBar} from 'react-native';
 import {useRoute} from '@react-navigation/native';
-import Header from '../components/Header';
+import Header from '../../components/Header';
 
 interface RenderData {
   item: IMessage;
@@ -37,7 +37,7 @@ export default function ChatScreen() {
         }
         style={styles.bg}>
         <ImageBackground
-          source={require('../assets/images/BG.png')}
+          source={require('../../assets/images/BG.png')}
           style={styles.bg}>
           <FlatList
             data={messages}

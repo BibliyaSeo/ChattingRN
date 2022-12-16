@@ -1,9 +1,10 @@
 import React from 'react';
-import ChatListItem from '../components/ChatListItem';
-import chats from '../assets/data/chats.json';
+import chats from '../../assets/data/chats.json';
 import {FlatList} from 'react-native';
-import {IChat} from '../types/chatTypes';
-import Header from '../components/Header';
+
+import ChatListItem from '../../components/ChatListItem';
+import {IChat} from '../../types/chatTypes';
+import Header from '../../components/Header';
 
 interface RenderData {
   item: IChat;
