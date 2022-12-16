@@ -11,3 +11,13 @@ export interface IChat {
     createdAt: string;
   };
 }
+
+export interface IMessage {
+  id: string;
+  text: string;
+  createdAt: string;
+  user: {
+    id: string;
+    name: string;
+  };
+}
