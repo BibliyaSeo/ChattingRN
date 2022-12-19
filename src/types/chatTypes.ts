@@ -4,6 +4,7 @@ export interface IChat {
     id: string;
     image: string;
     name: string;
+    status?: string;
   };
   lastMessage: {
     id: string;

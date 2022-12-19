@@ -7,10 +7,12 @@ import {useNavigation} from '@react-navigation/native';
 
 interface IHeader {
   title: string;
-  iconENN: boolean;
-  iconType: string;
+  iconENN?: boolean;
+  iconType?: string;
+  iconLocation?: string;
   icon: string;
-  iconLocation: string;
+  nav1?: string;
+  nav2?: string;
 }
 
 export default function Header({
@@ -19,7 +21,10 @@ export default function Header({
   iconType,
   iconLocation,
   icon,
+  nav1,
+  nav2,
 }: IHeader) {
+  // const navigation = useNavigation<NavigationProp<BottomTabsParamList>>();
   const navigation = useNavigation();
   const color = 'royalblue';
   const transparent = 'transparent';
@@ -44,7 +49,7 @@ export default function Header({
         <>
           <TouchableOpacity
             style={styles.iconLeft}
-            onPress={() => navigation.goBack()}>
+            onPress={() => navigation.navigate(nav1)}>
             {iconENN && myIconType}
           </TouchableOpacity>
           <Text style={styles.title}>{title}</Text>
@@ -54,13 +59,13 @@ export default function Header({
         </>
       ) : iconLocation === 'right' ? (
         <>
-          <TouchableOpacity
-            style={styles.iconLeft}
-            onPress={() => navigation.goBack()}>
+          <TouchableOpacity style={styles.iconLeft}>
             {iconENN && transparentIcon}
           </TouchableOpacity>
           <Text style={styles.title}>{title}</Text>
-          <TouchableOpacity style={styles.iconRight}>
+          <TouchableOpacity
+            style={styles.iconRight}
+            onPress={() => navigation.navigate(nav1)}>
             {iconENN && myIconType}
           </TouchableOpacity>
         </>
@@ -68,11 +73,13 @@ export default function Header({
         <>
           <TouchableOpacity
             style={styles.iconLeft}
-            onPress={() => navigation.goBack()}>
+            onPress={() => navigation.navigate(nav1)}>
             {iconENN && myIconType}
           </TouchableOpacity>
           <Text style={styles.title}>{title}</Text>
-          <TouchableOpacity style={styles.iconRight}>
+          <TouchableOpacity
+            style={styles.iconRight}
+            onPress={() => navigation.navigate(nav2)}>
             {iconENN && myIconType}
           </TouchableOpacity>
         </>

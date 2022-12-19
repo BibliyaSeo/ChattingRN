@@ -5,13 +5,7 @@ import Header from '../components/Header';
 const NotImplementedScreen = () => {
   return (
     <View style={styles.container}>
-      <Header
-        title="Not Implemented"
-        iconENN={false}
-        iconType={''}
-        iconLocation={''}
-        icon={''}
-      />
+      <Header title="Not Implemented" icon={''} />
       <View style={styles.subContainer}>
         <Text style={styles.text}>Not Implemented!</Text>
         <Image

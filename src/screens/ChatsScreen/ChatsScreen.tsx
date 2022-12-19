@@ -18,6 +18,7 @@ export default function ChatsScreen() {
         iconType="entypo"
         iconLocation="right"
         icon={'new-message'}
+        nav1={'Contacts'}
       />
       <FlatList
         data={chats}

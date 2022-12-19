@@ -4,7 +4,8 @@
     "user": {
       "id": "u2",
       "name": "Lukas",
-      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/lukas.jpeg"
+      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/lukas.jpeg",
+      "status": "Hey There!"
     },
     "lastMessage": {
       "id": "m1",
@@ -17,7 +18,8 @@
     "user": {
       "id": "u3",
       "name": "Daniil Top",
-      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/1.jpg"
+      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/1.jpg",
+      "status": "Hey There!"
     },
     "lastMessage": {
       "id": "m2",
@@ -30,7 +32,8 @@
     "user": {
       "id": "u4",
       "name": "Alex",
-      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/8.png"
+      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/8.png",
+      "status": "Hey There!"
     },
     "lastMessage": {
       "id": "m3",
@@ -43,7 +46,8 @@
     "user": {
       "id": "u5",
       "name": "Vlad",
-      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/jeff.jpeg"
+      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/jeff.jpeg",
+      "status": "Hey There!"
     },
     "lastMessage": {
       "id": "m4",
@@ -56,7 +60,8 @@
     "user": {
       "id": "u6",
       "name": "Elon Musk",
-      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/elon.png"
+      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/elon.png",
+      "status": "Hey There!"
     },
     "lastMessage": {
       "id": "m5",

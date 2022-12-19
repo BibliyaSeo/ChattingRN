@@ -4,12 +4,15 @@ import NotImplementedScreen from '../screens/NotImplementedScreen';
 import ChatsScreen from '../screens/ChatsScreen/ChatsScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-// export type BottomTabsParamList = {
-//     Chats: undefined;
-//     Chat: {id: string; name: string};
-//   };
+export type BottomTabsParamList = {
+  Status: undefined;
+  Calls: undefined;
+  Camera: undefined;
+  Chats: undefined;
+  Settings: undefined;
+};
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator<BottomTabsParamList>();
 
 export default function MainTabNavigator() {
   return (

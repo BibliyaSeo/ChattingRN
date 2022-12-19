@@ -36,6 +36,7 @@ export default function ChatScreen() {
         iconType="ionicons"
         iconLocation="left"
         icon={'chevron-back'}
+        nav1={'Chats'}
       />
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}

@@ -1,4 +1,4 @@
-import {View, StyleSheet, TextInput, SafeAreaView} from 'react-native';
+import {StyleSheet, TextInput, SafeAreaView} from 'react-native';
 import React, {useState} from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -7,7 +7,6 @@ export default function InputBox() {
   const [newMessage, setNewMessage] = useState('');
 
   const onSend = () => {
-    console.log(newMessage);
     setNewMessage('');
   };
 
