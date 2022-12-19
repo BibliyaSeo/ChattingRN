@@ -1,4 +1,4 @@
-import {StyleSheet, TextInput, SafeAreaView} from 'react-native';
+import {StyleSheet, TextInput, SafeAreaView, View} from 'react-native';
 import React, {useState} from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -12,28 +12,32 @@ export default function InputBox() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <AntDesign name="plus" size={20} color="royalblue" />
-      <TextInput
-        style={styles.input}
-        placeholder="type your message..."
-        value={newMessage}
-        onChangeText={setNewMessage}
-      />
-      <MaterialIcons
-        onPress={onSend}
-        style={styles.send}
-        name="send"
-        size={16}
-        color="white"
-      />
+      <View style={styles.subContainer}>
+        <AntDesign name="plus" size={20} color="royalblue" />
+        <TextInput
+          style={styles.input}
+          placeholder="type your message..."
+          value={newMessage}
+          onChangeText={setNewMessage}
+        />
+        <MaterialIcons
+          onPress={onSend}
+          style={styles.send}
+          name="send"
+          size={16}
+          color="white"
+        />
+      </View>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
     backgroundColor: 'whitesmoke',
+  },
+  subContainer: {
+    flexDirection: 'row',
     paddingHorizontal: 10,
     paddingVertical: 5,
     alignItems: 'center',

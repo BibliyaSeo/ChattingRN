@@ -1,12 +1,17 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import Navigator from './src/navigation/Navigator';
+import {Amplify} from 'aws-amplify';
+import {withAuthenticator} from '@aws-amplify/ui-react-native';
+import awsconfig from './src/aws-exports';
+
+Amplify.configure({...awsconfig, Analytics: {disabled: true}});
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <Navigator />
-    </SafeAreaView>
+    </View>
   );
 };
 
@@ -17,4 +22,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default withAuthenticator(App);

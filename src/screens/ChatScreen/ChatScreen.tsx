@@ -13,7 +13,7 @@ import InputBox from '../../components/InputBox';
 import {StatusBar} from 'react-native';
 import {useRoute} from '@react-navigation/native';
 import Header from '../../components/Header';
-import {getStatusBarHeight} from 'react-native-status-bar-height';
+// import {getStatusBarHeight} from 'react-native-status-bar-height';
 
 interface RenderData {
   item: IMessage;
@@ -41,9 +41,7 @@ export default function ChatScreen() {
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         keyboardVerticalOffset={
-          Platform.OS === 'ios'
-            ? getStatusBarHeight(true)
-            : StatusBar.currentHeight
+          Platform.OS === 'ios' ? 0 : StatusBar.currentHeight
         }
         style={styles.bg}>
         <ImageBackground

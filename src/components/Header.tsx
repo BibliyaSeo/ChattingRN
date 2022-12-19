@@ -90,11 +90,12 @@ export default function Header({
 
 const styles = StyleSheet.create({
   header: {
-    height: 50,
+    height: 90,
     flexDirection: 'row',
     backgroundColor: 'whitesmoke',
-    alignItems: 'center',
+    alignItems: 'flex-end',
     justifyContent: 'space-between',
+    paddingBottom: 15,
   },
   title: {
     fontSize: 18,

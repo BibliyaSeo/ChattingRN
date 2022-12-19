@@ -3,6 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import NotImplementedScreen from '../screens/NotImplementedScreen';
 import ChatsScreen from '../screens/ChatsScreen/ChatsScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import SettingsScreen from '../screens/SettingsScreen';
 
 export type BottomTabsParamList = {
   Status: undefined;
@@ -60,7 +61,7 @@ export default function MainTabNavigator() {
       />
       <Tab.Screen
         name="Settings"
-        component={NotImplementedScreen}
+        component={SettingsScreen}
         options={{
           tabBarIcon: ({color, size}) => (
             <Ionicons name="settings-outline" size={size} color={color} />
