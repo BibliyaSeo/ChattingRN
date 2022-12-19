@@ -4,7 +4,7 @@ import React from 'react';
 interface ContactListItemProps {
   user: {
     id: string;
-    image: string;
+    image?: string;
     name: string;
     status?: string;
   };
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   name: {fontWeight: 'bold'},
-  content: {},
+  content: {flex: 1},
   subTitle: {
     color: 'gray',
   },

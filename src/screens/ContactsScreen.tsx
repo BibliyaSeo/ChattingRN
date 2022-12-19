@@ -1,15 +1,29 @@
 import {FlatList, View} from 'react-native';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Header from '../components/Header';
-import chats from '../assets/data/chats.json';
-import {IChat} from '../types/chatTypes';
+// import chats from '../assets/data/chats.json';
+// import {IChat} from '../types/chatTypes';
 import ContactListItem from '../components/ContactListItem';
+import {API, graphqlOperation} from 'aws-amplify';
+import {listUsers} from '../graphql/queries';
 
-interface RenderData {
-  item: IChat;
-}
+// interface RenderData {
+//   item: IChat;
+// }
 
 export default function ContactsScreen() {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    const getUserList = async () => {
+      try {
+        const res: any = await API.graphql(graphqlOperation(listUsers));
+        setUsers(res.data.listUsers.items);
+      } catch (error) {}
+    };
+    getUserList();
+  }, []);
+
   return (
     <View>
       <Header
@@ -21,11 +35,9 @@ export default function ContactsScreen() {
         nav1={'Chats'}
       />
       <FlatList
-        data={chats}
-        renderItem={({item}: RenderData) => (
-          <ContactListItem user={item.user} />
-        )}
-        keyExtractor={item => item.id}
+        data={users}
+        renderItem={({item}: any) => <ContactListItem user={item} />}
+        keyExtractor={({item}: any) => item?.id}
       />
     </View>
   );

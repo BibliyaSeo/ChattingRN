@@ -2,7 +2,7 @@ export interface IChat {
   id: string;
   user: {
     id: string;
-    image: string;
+    image?: string;
     name: string;
     status?: string;
   };
